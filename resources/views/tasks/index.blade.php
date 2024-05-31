@@ -7,6 +7,7 @@
 <body>
 <div class="container">
     <h1 class="mt-5">To-Do List</h1>
+    <a href="{{ route('tasks.by-date') }}" class="btn btn-secondary mb-3">View Tasks by Date and Time</a>
     <form action="{{ route('tasks.store') }}" method="POST" class="mb-3">
         @csrf
         <div class="input-group">

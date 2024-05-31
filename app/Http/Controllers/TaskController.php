@@ -36,4 +36,9 @@ class TaskController extends Controller
 
         return redirect()->route('tasks.index');
     }
+    public function tasksByDate()
+    {
+        $tasks = Task::orderBy('created_at', 'desc')->get();
+        return view('tasks.by_date', compact('tasks'));
+    }
 }
